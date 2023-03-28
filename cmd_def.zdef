@@ -1,0 +1,18 @@
+﻿/*
+*	命令定义文件
+*	所有命令分 _request、_response 后缀
+*	采用32位无符号整型存储命令值，各命令类型分割方式见注释
+*	第32位含义：0-请求 1-回应
+*	如	0000 0001 表示 jf_msg_type1_cmd1_request
+*		8000 0001 表示 jf_msg_type1_cmd1_response
+*/
+
+/*命令类型1 占用1-7位*/
+[1][command_type1][1-7]
+jf_msg_type1_cmd1;			/*命令1*/
+jf_msg_type1_cmd2;			/*命令2*/
+
+/*命令类型2 占用8-9位*/
+[2][command_type2][8-9]
+jf_msg_type2_cmd1;			/*命令1*/
+jf_msg_type2_cmd2;			/*命令2*/
